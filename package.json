@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "bin/rails s -b 0.0.0.0",
-    "routes": "bin/rails routes"
+    "routes": "bin/rails routes",
+    "reset": "bin/rails db:reset"
   },
   "version": "0.1.0",
   "devDependencies": {
