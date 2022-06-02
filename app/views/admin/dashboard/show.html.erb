@@ -1,2 +1,40 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin &raquo; Dashboard</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" class="col-4">Model</th>
+          <th scope="col" class="col-4">Stats</th>
+          <th scope="col" class="col-4">Redirect</th>
+        </tr>
+      </thead> 
+      <tbody>
+        <tr>
+          <th scope="row">Products</th>
+          <td><%= @products %></td>
+          <td><%= link_to "View Products", "/admin/products", class: "btn btn-primary"%></td>
+
+        </tr>
+        <tr>
+          <th scope="row">Categories</th>
+          <td><%= @categories %></td>
+          <td></td>
+
+        </tr>
+        <tr>
+          <th scope="row">Orders</th>
+          <td><%= @orders %></td>
+          <td></td>
+
+        </tr>
+        <tr>
+          <th scope="row">Line Items</th>
+          <td><%= @line_items %></td>
+          <td></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
