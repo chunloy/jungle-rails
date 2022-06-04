@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
     else
       #if authentication fails redirect to login
       render [:new]
+    end
   end
 
   def destroy
