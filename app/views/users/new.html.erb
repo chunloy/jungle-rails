@@ -3,9 +3,15 @@
 <%= form_for @user do |form| %>
 
   <div class="mb-3">
-    <%= form.label :name %>
+    <%= form.label :first_name %>
     <br>
-    <%= form.text_field :name %>
+    <%= form.text_field :first_name %>
+  </div>
+  
+  <div class="mb-3">
+    <%= form.label :last_name %>
+    <br>
+    <%= form.text_field :last_name %>
   </div>
   
   <div class="mb-3">
