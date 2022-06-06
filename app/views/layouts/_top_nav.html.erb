@@ -45,15 +45,17 @@
           </ul>
         </li>
       </ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav d-flex align-items-center">
 
         <% if current_user %>
-          <li class="nav-item navbar-text">Signed in as <%= current_user.name %> |</li>
+          <li class="nav-item navbar-text">Signed in as <%= current_user.name %></li>
+          <li class="nav-link"> | </li>
           <li class="nav-item"><%= link_to "Logout", '/logout', class: "nav-link" %></li>
           
-        <% else %>
-          <li class="nav-item navbar-text"> <%= link_to 'Login', '/login', class: "nav-link" %> |</li>
-          <li class="nav-item"> <%= link_to 'Register', [:new, :user], class: "nav-link" %> </li>
+          <% else %>
+          <li class="nav-item navbar-text"> <%= link_to 'Login', '/login', class: "nav-link" %></li>
+          <li class="nav-link"> | </li>
+          <li class="nav-item"> <%= link_to 'Register', [:new, :user], class: "nav-link" %></li>
         <% end %>
 
         <li class="nav-item dropdown">

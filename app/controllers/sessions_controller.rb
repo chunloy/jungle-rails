@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
       redirect_to [:root]
     else
       #if authentication fails redirect to login
-      render [:new]
+      render :new
     end
   end
 
   def destroy
     session[:user_id]=nil
-    render [:new]
+    render :new
   end
 end
