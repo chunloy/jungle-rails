@@ -13,7 +13,9 @@
   "scripts": {
     "start": "bin/rails s -b 0.0.0.0",
     "routes": "bin/rails routes",
-    "reset": "bin/rails db:reset"
+    "reset": "bin/rails db:reset",
+    "test": "bin/rails s -e test",
+    "cypress": "bin/rails cypress:open"
   },
   "version": "0.1.0",
   "devDependencies": {
