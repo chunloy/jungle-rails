@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     #If user exists and entered correct password
     if @user
       #store user id in cookie
-      session[:user_id] = user.id
+      session[:user_id] = @user.id
       redirect_to [:root]
     else
       #if authentication fails redirect to login
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id]=nil
+    session[:user_id] = nil
     render :new
   end
 end
